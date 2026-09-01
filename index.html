@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Sorkar Agro Ventures</title>
+<script src="https://cloudflare.com"></script>
+
     <style>
 
 .ticker-content {
@@ -727,6 +729,22 @@ function showDate() {
 showDate();
 </script>
 
+document.getElementById('download-pdf').addEventListener('click', function() {
+    // যে অংশটি পিডিএফ করতে চান তার আইডি (যেমন পুরো বডি বা নির্দিষ্ট কোনো ডিভ)
+    const element = document.body; 
+    
+    // পিডিএফ এর সেটিংস
+    const options = {
+        margin: 10,
+        filename: 'my-web-page.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // পিডিএফ তৈরি ও ডাউনলোড
+    html2pdf().set(options).from(element).save();
+});
 
 </body>
 </html>
