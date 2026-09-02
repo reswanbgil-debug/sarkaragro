@@ -545,7 +545,7 @@ body {
 <!-- ================= Accordion End ================= -->
 
 <!-- ================= Card Start ================= -->
-<div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 20px; padding-left: 500px; padding-right: 500px;">
+<div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 20px;">
   <div class="col">
     <div class="card h-100">
       <img src="Agro1.png" class="card-img-top" alt="Invest">
@@ -727,26 +727,6 @@ function showDate() {
 }
 
 showDate();
-</script>
-
-<script>
-document.getElementById('download-pdf').addEventListener('click', function() {
-    // যে অংশটি পিডিএফ করতে চান তার আইডি (যেমন পুরো বডি বা নির্দিষ্ট কোনো ডিভ)
-    const element = document.body; 
-    
-    // পিডিএফ এর সেটিংস
-    const options = {
-        margin: 10,
-        filename: 'my-web-page.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    // পিডিএফ তৈরি ও ডাউনলোড
-    html2pdf().set(options).from(element).save();
-});
-</script>
 
 </body>
 </html>
