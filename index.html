@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Sorkar Agro Ventures</title>
-<script src="https://cloudflare.com"></script>
-
     <style>
 
 .ticker-content {
@@ -323,9 +321,9 @@ body {
                     </button>
 
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Chairman Speech</a></li>
-                        <li><a class="dropdown-item" href="#">MD Speech</a></li>
-                        <li><a class="dropdown-item" href="#">Our Team</a></li>
+                        <li><a class="dropdown-item" href="Chairman Speech.html">Chairman Speech</a></li>
+                        <li><a class="dropdown-item" href="MD Speech.html">MD Speech</a></li>
+                        <li><a class="dropdown-item" href="ourteam.html">Our Team</a></li>
                     </ul>
                 </li>
 
@@ -510,7 +508,7 @@ body {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
  <!-- ================= Accordion Start ================= -->
-<div class="accordion accordion-flush" id="accordionFlushExample" style=" padding-top: 20px;">
+<div class="accordion accordion-flush" id="accordionFlushExample" style=" padding-top: 20px; padding-left: 500px; padding-right: 500px;">
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -545,7 +543,7 @@ body {
 <!-- ================= Accordion End ================= -->
 
 <!-- ================= Card Start ================= -->
-<div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 20px;">
+<div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 20px; padding-left: 500px; padding-right: 500px;">
   <div class="col">
     <div class="card h-100">
       <img src="Agro1.png" class="card-img-top" alt="Invest">
@@ -694,39 +692,5 @@ body {
         </div>
       </footer>
     </div>
-
-<button onclick="window.print()">Print this page</button>
-
-<div id="time"></div>
-
-<script>
-function showTime() {
-    const now = new Date();
-
-    document.getElementById("time").innerHTML =
-        now.toLocaleTimeString();
-}
-
-setInterval(showTime, 1000);
-showTime();
-</script>
-
-
-<h2 id="date"></h2>
-
-<script>
-function showDate() {
-    const now = new Date();
-
-    const day = String(now.getDate()).padStart(2, "0");
-    const month = String(now.getMonth() + 1).padStart(2, "0");
-    const year = now.getFullYear();
-
-    document.getElementById("date").innerText =
-        `${day}-${month}-${year}`;
-}
-
-showDate();
-
 </body>
 </html>
