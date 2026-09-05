@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Sorkar Agro Ventures</title>
+    <style>
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker 30s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Stop scrolling when mouse is over it */
+.ticker:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+
+/* ================= LAYERING / GLOBAL OVERFLOW ================= */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ================= PROFESSIONAL NAVBAR ================= */
+.top-navbar {
+    position: relative;
+    z-index: 1100;
+    min-height: 72px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.brand-logo {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    letter-spacing: 0.2px;
+}
+
+.login-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 18px;
+}
+
+.main-navbar {
+    position: relative;
+    z-index: 1000;
+    min-height: 58px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.main-navbar .navbar-nav {
+    align-items: center;
+}
+
+.main-navbar .nav-item {
+    position: relative;
+}
+
+.main-navbar .nav-main-link,
+.main-navbar .nav-dropdown-btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 15px;
+    font-weight: 600;
+    color: #212529;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.main-navbar .nav-main-link:hover,
+.main-navbar .nav-main-link:focus,
+.main-navbar .nav-dropdown-btn:hover,
+.main-navbar .nav-dropdown-btn:focus,
+.main-navbar .nav-dropdown-btn.show {
+    background: rgba(25, 135, 84, 0.10);
+    color: #198754;
+}
+
+/* Dropdown is explicitly above carousel */
+.main-navbar .dropdown {
+    position: relative;
+    z-index: 1200;
+}
+
+.main-navbar .dropdown-menu {
+    z-index: 2000;
+    min-width: 215px;
+    margin-top: 6px;
+    padding: 8px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.20);
+}
+
+.main-navbar .dropdown-item {
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color .18s ease, color .18s ease;
+}
+
+.main-navbar .dropdown-item:hover,
+.main-navbar .dropdown-item:focus {
+    background: #198754;
+    color: #fff;
+}
+
+/* ================= CAROUSEL LAYER ================= */
+.hero-carousel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Carousel */
+  /* Carousel Height */
+        .hero-carousel .carousel-item {
+            height: 550px;
+            position: relative;
+        }
+
+        /* Image */
+        .hero-carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Dark Overlay */
+        .hero-carousel .carousel-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35),
+                rgba(0, 0, 0, 0.1)
+            );
+            z-index: 1;
+        }
+
+        /* Caption */
+        .hero-carousel .carousel-caption {
+            z-index: 2;
+            text-align: left;
+            left: 10%;
+            right: auto;
+            bottom: 50%;
+            transform: translateY(50%);
+            max-width: 650px;
+        }
+
+        .hero-carousel .carousel-caption h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-carousel .carousel-caption p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .hero-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Indicators */
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 6px;
+        }
+
+        /* Previous / Next */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 7%;
+        }
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 991.98px) {
+    .main-navbar .navbar-nav {
+        align-items: stretch;
+        gap: 2px;
+        padding: 10px 0;
+    }
+
+    .main-navbar .nav-main-link,
+    .main-navbar .nav-dropdown-btn {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-navbar .dropdown-menu {
+        position: static;
+        margin-top: 2px;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .hero-carousel .carousel-item {
+                height: 450px;
+            }
+
+            .hero-carousel .carousel-caption {
+                left: 8%;
+                right: 8%;
+                max-width: 100%;
+            }
+
+            .hero-carousel .carousel-caption h1 {
+                font-size: 34px;
+            }
+
+            .hero-carousel .carousel-caption p {
+                font-size: 16px;
+            }
+        }
+/* ================= Body ================= */
+        * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f7fbff;
+      color: #142238;
+      font-family: "Noto Serif Bengali", serif;
+      overflow-x: hidden;
+    }
+
+    .speech-page {
+      min-height: 100vh;
+      position: relative;
+      padding: 20px 0 80px;
+      overflow: hidden;
+    }
+
+    /* Decorative background */
+    .shape {
+      position: absolute;
+      z-index: 0;
+      opacity: .55;
+      filter: blur(.2px);
+      pointer-events: none;
+    }
+
+    .shape-one {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: #eaf7ff;
+      top: -55px;
+      left: 43%;
+    }
+
+    .shape-two {
+      width: 260px;
+      height: 120px;
+      background: #e4f0ff;
+      border-radius: 20px;
+      transform: rotate(13deg);
+      left: 13%;
+      bottom: -55px;
+    }
+
+    .shape-three {
+      width: 220px;
+      height: 110px;
+      background: #dffaff;
+      border-radius: 20px;
+      transform: rotate(-12deg);
+      right: 20%;
+      bottom: -35px;
+    }
+
+    .content-wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: auto;
+      padding: 0 25px;
+    }
+
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    .page-title .blue {
+      color: #1194bd;
+    }
+
+    .title-line {
+      width: 95px;
+      height: 4px;
+      background: #27b7e8;
+      border-radius: 10px;
+      margin: 14px auto 20px;
+    }
+
+    .breadcrumb-custom {
+      text-align: center;
+      font-size: 15px;
+      color: #516176;
+      margin-bottom: 48px;
+    }
+
+    .speech-card {
+      background: rgba(255,255,255,.18);
+      border: 0;
+      position: relative;
+    }
+
+    .chairman-photo {
+      width: 100%;
+      max-width: 225px;
+      aspect-ratio: 1 / 1.35;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(20, 50, 80, .08);
+    }
+
+    .speech-content {
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .speech-content h2 {
+      font-size: 27px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .designation {
+      color: #1295bd;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .speech-content p {
+      margin-bottom: 17px;
+    }
+
+    .signature {
+      text-align: right;
+      font-size: 17px;
+      line-height: 1.55;
+      margin-top: 8px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #d9f8ff;
+      color: #087fa5;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: .25s ease;
+    }
+
+    .back-btn:hover {
+      background: #bdeef9;
+      color: #056c8b;
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 767.98px) {
+      .speech-page {
+        padding-top: 15px;
+      }
+
+      .breadcrumb-custom {
+        margin-bottom: 30px;
+      }
+
+      .chairman-photo {
+        max-width: 210px;
+        margin-bottom: 25px;
+      }
+
+      .speech-content {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .speech-content h2 {
+        font-size: 24px;
+      }
+
+      .signature {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      .back-area {
+        text-align: center;
+        margin-top: 25px;
+      }
+    }
+
+
+    </style>
+</head>
+<!-- ticker -->
+<body>
+    <div class="ticker bg-danger text-light" style="padding: 10px;">
+  <div class="ticker-content">
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">📢 Breaking News:</span>
+    New products available
+    &nbsp;&nbsp; • &nbsp;&nbsp;
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">🚚</span>
+     Free delivery on orders over $500
+    &nbsp;&nbsp; • &nbsp;&nbsp;
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">🔥</span>
+     Special offer — Shop Now!
+  </div>
+</div>
+<!-- ================= TOP NAVBAR ================= -->
+<nav class="navbar navbar-dark bg-dark top-navbar">
+    <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="favicon.jpeg" width="50" height="50" class="brand-logo" alt="Sorkar Agro Ventures">
+            <span class="fw-bolder text-warning brand-title">Sorkar Agro Ventures</span>
+        </a>
+
+        <a class="btn btn-outline-light login-btn" href="login.html">
+            Login
+        </a>
+    </div>
+</nav>
+
+<!-- ================= MAIN NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg main-navbar">
+    <div class="container-fluid px-3 px-lg-4">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-1">
+
+                <li class="nav-item">
+                    <a class="nav-link active nav-main-link" aria-current="page" href="bootstrap2_final_clean.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button class="nav-link nav-dropdown-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        About
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Chairman Speech.html">Chairman Speech</a></li>
+                        <li><a class="dropdown-item" href="MD Speech.html">MD Speech</a></li>
+                        <li><a class="dropdown-item" href="ourteam.html">Our Team</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button class="nav-link nav-dropdown-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        Sector
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Production</a></li>
+                        <li><a class="dropdown-item" href="#">Trade</a></li>
+                        <li><a class="dropdown-item" href="#">Investment</a></li>
+                        <li><a class="dropdown-item" href="#">Enterprise</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">News</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Media</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Report</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <main class="speech-page">
+
+    <!-- Background shapes -->
+    <div class="shape shape-one"></div>
+    <div class="shape shape-two"></div>
+    <div class="shape shape-three"></div>
+
+    <div class="content-wrap">
+
+      <!-- Heading -->
+      <header>
+        <h1 class="page-title">
+          MD <span class="blue">Speech</span>
+        </h1>
+
+        <div class="title-line"></div>
+
+        <div class="breadcrumb-custom">
+          হোম&nbsp; / &nbsp;চেয়ারম্যানের বাণী
+        </div>
+      </header>
+
+      <!-- Speech -->
+      <section class="speech-card">
+        <div class="row align-items-start g-4 g-lg-5">
+
+          <!-- Chairman Image -->
+          <div class="col-12 col-md-4">
+            <!-- আপনার ছবির নাম chairman.jpg হলে এটি কাজ করবে -->
+            <img
+              src="chairman.jpg"
+              class="chairman-photo"
+              alt="চেয়ারম্যান"
+              onerror="this.src='https://via.placeholder.com/450x600?text=Chairman+Photo';"
+            >
+          </div>
+
+          <!-- Speech Text -->
+          <div class="col-12 col-md-8">
+            <div class="speech-content">
+
+              <h2>মোঃ রুহুল আমিন</h2>
+              <div class="designation">চেয়ারম্যান, স্বয়ার কন্সট্রাকশন</div>
+
+              <p>
+                প্রিয় ভাই ও বোনেরা,<br>
+                আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহি ওয়া বারাকাতুহ।
+              </p>
+
+              <p>
+                প্রযুক্তির এই যুগে স্বয়ার কন্সট্রাকশন নিয়ে আপনাদের মাঝে উপস্থিত হতে পেরে
+                আমি অত্যন্ত আনন্দিত। আমরা দীর্ঘদিন ধরে বিশ্বস্ততা, গুণগত মান এবং
+                সেবার মাধ্যমে গ্রাহকদের আস্থা অর্জন করে আসছি।
+              </p>
+
+              <p>
+                আমাদের লক্ষ্য শুধু ব্যবসায় সফল হওয়া নয়, বরং সমাজের প্রতিটি স্তরে
+                মানসম্মত প্রযুক্তি সেবা পৌঁছে দেওয়া। আমরা বিশ্বাস করি যে, সঠিক প্রযুক্তি
+                ব্যবহার করে আমরা আমাদের সমাজকে এগিয়ে নিয়ে যেতে পারি।
+              </p>
+
+              <p>
+                আপনার মূল্যবান পরামর্শ এবং সহযোগিতা আমাদেরকে আরও এগিয়ে যেতে সাহায্য করবে।
+              </p>
+
+              <div class="signature">
+                ধন্যবাদান্তে,<br>
+                <strong>মোঃ রুহুল আমিন</strong><br>
+                চেয়ারম্যান<br>
+                স্বয়ার কন্সট্রাকশন
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Back button -->
+      <div class="back-area mt-4 pt-2">
+        <a href="bootstrap2_final_clean.html" class="back-btn">
+          <span>←</span>
+          <span>Home</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+<!-- ================= Footer start ================= -->
+<div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#" aria-label="Instagram"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#" aria-label="Facebook"
+                ><svg class="bi" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
