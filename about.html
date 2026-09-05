@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=syeuhjO0o4oXrfI9Ovm-7CmnvCS6Oqb8W13GNs20XZQ3-8beufXW9CoS5-RzNJnLC_eY1m_oAJEmqfOlmTGx9BftD7O_2TbfZahoA7vYtNDna6le8wjRUrNFKXtnhXZzlBPVwNMnyu2E7r9GQfB9M4AJozEMxNn51Mk6lkNY69SLTnNfr-ZanPbVBfwMFzD4wNjFlhz9N_vd-4sfk-MLpqU7akLr4S-zGtuxEA2jh3TMU44Iy7H2gr_BtMpJLomlf_KVoEbpoESbMf8xHBdI3xYwezSgKWMhrQ8_bdeEaejiVodFiHug28n0KyL4n3LS" charset="UTF-8"></script>
+<title>Sorkar Agro Ventures</title>
+    <style>
+
+.ticker-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: ticker 30s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Stop scrolling when mouse is over it */
+.ticker:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+
+/* ================= LAYERING / GLOBAL OVERFLOW ================= */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ================= PROFESSIONAL NAVBAR ================= */
+.top-navbar {
+    position: relative;
+    z-index: 1100;
+    min-height: 72px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.brand-logo {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    letter-spacing: 0.2px;
+}
+
+.login-btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 18px;
+}
+
+.main-navbar {
+    position: relative;
+    z-index: 1000;
+    min-height: 58px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.main-navbar .navbar-nav {
+    align-items: center;
+}
+
+.main-navbar .nav-item {
+    position: relative;
+}
+
+.main-navbar .nav-main-link,
+.main-navbar .nav-dropdown-btn {
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 15px;
+    font-weight: 600;
+    color: #212529;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.main-navbar .nav-main-link:hover,
+.main-navbar .nav-main-link:focus,
+.main-navbar .nav-dropdown-btn:hover,
+.main-navbar .nav-dropdown-btn:focus,
+.main-navbar .nav-dropdown-btn.show {
+    background: rgba(25, 135, 84, 0.10);
+    color: #198754;
+}
+
+/* Dropdown is explicitly above carousel */
+.main-navbar .dropdown {
+    position: relative;
+    z-index: 1200;
+}
+
+.main-navbar .dropdown-menu {
+    z-index: 2000;
+    min-width: 215px;
+    margin-top: 6px;
+    padding: 8px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.20);
+}
+
+.main-navbar .dropdown-item {
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color .18s ease, color .18s ease;
+}
+
+.main-navbar .dropdown-item:hover,
+.main-navbar .dropdown-item:focus {
+    background: #198754;
+    color: #fff;
+}
+
+/* ================= CAROUSEL LAYER ================= */
+.hero-carousel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Carousel */
+  /* Carousel Height */
+        .hero-carousel .carousel-item {
+            height: 550px;
+            position: relative;
+        }
+
+        /* Image */
+        .hero-carousel .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Dark Overlay */
+        .hero-carousel .carousel-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.35),
+                rgba(0, 0, 0, 0.1)
+            );
+            z-index: 1;
+        }
+
+        /* Caption */
+        .hero-carousel .carousel-caption {
+            z-index: 2;
+            text-align: left;
+            left: 10%;
+            right: auto;
+            bottom: 50%;
+            transform: translateY(50%);
+            max-width: 650px;
+        }
+
+        .hero-carousel .carousel-caption h1 {
+            font-size: 55px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-carousel .carousel-caption p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Button */
+        .hero-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Indicators */
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 6px;
+        }
+
+        /* Previous / Next */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 7%;
+        }
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 991.98px) {
+    .main-navbar .navbar-nav {
+        align-items: stretch;
+        gap: 2px;
+        padding: 10px 0;
+    }
+
+    .main-navbar .nav-main-link,
+    .main-navbar .nav-dropdown-btn {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-navbar .dropdown-menu {
+        position: static;
+        margin-top: 2px;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .hero-carousel .carousel-item {
+                height: 450px;
+            }
+
+            .hero-carousel .carousel-caption {
+                left: 8%;
+                right: 8%;
+                max-width: 100%;
+            }
+
+            .hero-carousel .carousel-caption h1 {
+                font-size: 34px;
+            }
+
+            .hero-carousel .carousel-caption p {
+                font-size: 16px;
+            }
+        }
+/* ================= Body ================= */
+        * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f7fbff;
+      color: #142238;
+      font-family: "Noto Serif Bengali", serif;
+      overflow-x: hidden;
+    }
+
+    .speech-page {
+      min-height: 100vh;
+      position: relative;
+      padding: 20px 0 80px;
+      overflow: hidden;
+    }
+
+    /* Decorative background */
+    .shape {
+      position: absolute;
+      z-index: 0;
+      opacity: .55;
+      filter: blur(.2px);
+      pointer-events: none;
+    }
+
+    .shape-one {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: #eaf7ff;
+      top: -55px;
+      left: 43%;
+    }
+
+    .shape-two {
+      width: 260px;
+      height: 120px;
+      background: #e4f0ff;
+      border-radius: 20px;
+      transform: rotate(13deg);
+      left: 13%;
+      bottom: -55px;
+    }
+
+    .shape-three {
+      width: 220px;
+      height: 110px;
+      background: #dffaff;
+      border-radius: 20px;
+      transform: rotate(-12deg);
+      right: 20%;
+      bottom: -35px;
+    }
+
+    .content-wrap {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: auto;
+      padding: 0 25px;
+    }
+
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    .page-title .blue {
+      color: #1194bd;
+    }
+
+    .title-line {
+      width: 95px;
+      height: 4px;
+      background: #27b7e8;
+      border-radius: 10px;
+      margin: 14px auto 20px;
+    }
+
+    .breadcrumb-custom {
+      text-align: center;
+      font-size: 15px;
+      color: #516176;
+      margin-bottom: 48px;
+    }
+
+    .speech-card {
+      background: rgba(255,255,255,.18);
+      border: 0;
+      position: relative;
+    }
+
+    .chairman-photo {
+      width: 100%;
+      max-width: 225px;
+      aspect-ratio: 1 / 1.35;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(20, 50, 80, .08);
+    }
+
+    .speech-content {
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .speech-content h2 {
+      font-size: 27px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    .designation {
+      color: #1295bd;
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .speech-content p {
+      margin-bottom: 17px;
+    }
+
+    .signature {
+      text-align: right;
+      font-size: 17px;
+      line-height: 1.55;
+      margin-top: 8px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #d9f8ff;
+      color: #087fa5;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 25px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: .25s ease;
+    }
+
+    .back-btn:hover {
+      background: #bdeef9;
+      color: #056c8b;
+      transform: translateX(-3px);
+    }
+
+    @media (max-width: 767.98px) {
+      .speech-page {
+        padding-top: 15px;
+      }
+
+      .breadcrumb-custom {
+        margin-bottom: 30px;
+      }
+
+      .chairman-photo {
+        max-width: 210px;
+        margin-bottom: 25px;
+      }
+
+      .speech-content {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .speech-content h2 {
+        font-size: 24px;
+      }
+
+      .signature {
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      .back-area {
+        text-align: center;
+        margin-top: 25px;
+      }
+    }
+
+ :root{
+      --agro:#198754;
+      --agro-dark:#0b5d3b;
+      --agro-soft:#edf8f1;
+      --ink:#173126;
+      --muted:#6c7a73;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color:var(--ink);
+      background:#fff;
+    }
+    .navbar{
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      box-shadow:0 2px 20px rgba(0,0,0,.06);
+    }
+    .navbar-brand{font-weight:800; letter-spacing:-.5px}
+    .brand-mark{
+      width:42px;height:42px;border-radius:12px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:var(--agro);color:#fff;font-size:21px;
+    }
+    .nav-link{font-weight:600;color:#34443d!important}
+    .nav-link:hover,.nav-link.active{color:var(--agro)!important}
+
+    .hero{
+      min-height:72vh;
+      display:flex;align-items:center;
+      position:relative;overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(4,37,23,.88),rgba(4,37,23,.52),rgba(4,37,23,.18)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+    .hero:after{
+      content:"";position:absolute;left:-10%;bottom:-90px;
+      width:120%;height:180px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0;
+    }
+    .hero-content{position:relative;z-index:2}
+    .eyebrow{
+      display:inline-block;padding:8px 14px;border-radius:50px;
+      background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+      color:#d9f6e5;font-size:.85rem;font-weight:700;letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .hero h1{font-size:clamp(2.5rem,5vw,5rem);font-weight:800;line-height:1.05}
+    .hero p{max-width:680px;color:#e8f4ed;font-size:1.1rem}
+    .btn-agro{background:var(--agro);color:#fff;border:none}
+    .btn-agro:hover{background:#146c43;color:#fff}
+
+    .section-pad{padding:90px 0}
+    .section-kicker{color:var(--agro);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+    .section-title{font-weight:800;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-1px}
+    .section-lead{color:var(--muted);font-size:1.05rem;max-width:760px}
+
+    .about-img{
+      min-height:470px;border-radius:28px;overflow:hidden;
+      background:url("https://images.unsplash.com/photo-1523742818584-7e3a0a2b2f3b?auto=format&fit=crop&w=1200&q=85")
+      center/cover;
+      position:relative;
+    }
+    .floating-card{
+      position:absolute;right:22px;bottom:22px;
+      background:#fff;border-radius:18px;padding:18px 20px;
+      box-shadow:0 15px 45px rgba(0,0,0,.15);
+      max-width:230px;
+    }
+
+    .stat-strip{margin-top:-30px;position:relative;z-index:5}
+    .stat-card{
+      background:#fff;border:1px solid #e7eee9;border-radius:20px;
+      padding:28px;box-shadow:0 12px 35px rgba(20,70,45,.08);height:100%;
+    }
+    .stat-number{font-size:2rem;font-weight:800;color:var(--agro)}
+    .stat-label{color:var(--muted);font-size:.95rem}
+
+    .value-card,.sector-card,.timeline-card{
+      border:0;border-radius:22px;background:#fff;
+      box-shadow:0 10px 35px rgba(20,70,45,.08);
+      height:100%;transition:.25s ease;
+    }
+    .value-card:hover,.sector-card:hover{transform:translateY(-7px);box-shadow:0 18px 45px rgba(20,70,45,.13)}
+    .icon-box{
+      width:56px;height:56px;border-radius:16px;background:var(--agro-soft);
+      color:var(--agro);display:flex;align-items:center;justify-content:center;
+      font-size:25px;
+    }
+    .soft-section{background:var(--agro-soft)}
+
+    .timeline{position:relative}
+    .timeline:before{
+      content:"";position:absolute;left:20px;top:0;bottom:0;width:2px;background:#cde5d7;
+    }
+    .timeline-item{position:relative;padding-left:62px;margin-bottom:38px}
+    .timeline-dot{
+      position:absolute;left:8px;top:2px;width:26px;height:26px;border-radius:50%;
+      background:var(--agro);border:6px solid #dff2e7;
+    }
+    .year{color:var(--agro);font-weight:800}
+
+    .cta{
+      border-radius:30px;
+      background:
+        linear-gradient(100deg,rgba(7,65,40,.94),rgba(25,135,84,.88)),
+        url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      color:#fff;padding:70px 45px;
+    }
+
+    @media(max-width:767px){
+      .hero{min-height:78vh}
+      .section-pad{padding:65px 0}
+      .about-img{min-height:350px}
+      .cta{padding:50px 25px}
+    }
+
+
+    </style>
+</head>
+<!-- ticker -->
+<body>
+    <div class="ticker bg-danger text-light" style="padding: 10px;">
+  <div class="ticker-content">
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">📢 Breaking News:</span>
+    New products available
+    &nbsp;&nbsp; • &nbsp;&nbsp;
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">🚚</span>
+     Free delivery on orders over $500
+    &nbsp;&nbsp; • &nbsp;&nbsp;
+    <span style="background:#8b0000; padding: 5px; border-radius: 8px;">🔥</span>
+     Special offer — Shop Now!
+  </div>
+</div>
+<!-- ================= TOP NAVBAR ================= -->
+<nav class="navbar navbar-dark bg-dark top-navbar">
+    <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="favicon.jpeg" width="50" height="50" class="brand-logo" alt="Sorkar Agro Ventures">
+            <span class="fw-bolder text-warning brand-title">Sorkar Agro Ventures</span>
+        </a>
+
+        <a class="btn btn-outline-light login-btn" href="login.html">
+            Login
+        </a>
+    </div>
+</nav>
+
+<!-- ================= MAIN NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg main-navbar">
+    <div class="container-fluid px-3 px-lg-4">
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-1">
+
+                <li class="nav-item">
+                    <a class="nav-link active nav-main-link" aria-current="page" href="bootstrap2_final_clean.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button class="nav-link nav-dropdown-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        About
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Chairman Speech.html">Chairman Speech</a></li>
+                        <li><a class="dropdown-item" href="MD Speech.html">MD Speech</a></li>
+                        <li><a class="dropdown-item" href="ourteam.html">Our Team</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button class="nav-link nav-dropdown-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        Sector
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Production</a></li>
+                        <li><a class="dropdown-item" href="#">Trade</a></li>
+                        <li><a class="dropdown-item" href="#">Investment</a></li>
+                        <li><a class="dropdown-item" href="#">Enterprise</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">News</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Media</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Report</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-main-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+  <!-- HERO -->
+<header class="hero">
+  <div class="container hero-content">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="eyebrow mb-3">Growing Agriculture • Building Tomorrow</span>
+        <h1 class="text-white mb-4">কৃষির শক্তিতে<br><span class="text-warning">সমৃদ্ধ ভবিষ্যৎ</span></h1>
+        <p class="mb-4">
+          সরকার এগ্রো ইন্ডাস্ট্রিজ একটি আধুনিক, টেকসই ও বহুমুখী কৃষিভিত্তিক উদ্যোগ—
+          যেখানে উৎপাদন, কৃষি, বিনিয়োগ ও এন্টারপ্রাইজকে একসাথে এগিয়ে নেওয়ার লক্ষ্য রয়েছে।
+        </p>
+        <a href="#about" class="btn btn-agro btn-lg rounded-pill px-4 me-2">আমাদের সম্পর্কে</a>
+        <a href="#sectors" class="btn btn-outline-light btn-lg rounded-pill px-4">আমাদের কার্যক্রম</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<section class="stat-strip">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-lg-3">
+        <div class="stat-card"><div class="stat-number">04</div><div class="stat-label">মূল ব্যবসায়িক সেক্টর</div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card"><div class="stat-number">07+</div><div class="stat-label">কৃষি ও উৎপাদন কার্যক্রম</div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card"><div class="stat-number">10Y</div><div class="stat-label">দীর্ঘমেয়াদি ভিশন</div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">টেকসই উন্নয়নে অঙ্গীকার</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="about-img">
+          <div class="floating-card">
+            <div class="section-kicker mb-1">Our Vision</div>
+            <h5 class="fw-bold mb-1">কৃষিকে ব্যবসার কেন্দ্রবিন্দুতে</h5>
+            <small class="text-secondary">উৎপাদন থেকে বাজার—একটি সমন্বিত agro value chain.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="section-kicker mb-2">Who We Are</div>
+        <h2 class="section-title mb-3">আমরা কারা?</h2>
+        <div class="mini-line mb-4"></div>
+        <p class="section-lead mb-4">
+          সরকার এগ্রো ইন্ডাস্ট্রিজ একটি কৃষিভিত্তিক ব্যবসায়িক প্ল্যাটফর্ম, যার লক্ষ্য
+          আধুনিক কৃষি ব্যবস্থাপনা, উৎপাদন, বাজার সংযোগ এবং বিনিয়োগের মাধ্যমে একটি
+          শক্তিশালী ও টেকসই agro ecosystem গড়ে তোলা।
+        </p>
+        <p class="text-secondary">
+          আমাদের পরিকল্পনায় রয়েছে ধান, আলু, সরিষা ও অন্যান্য ফসল উৎপাদন,
+          গবাদিপশু ও পোল্ট্রি, কৃষিপণ্য বাণিজ্য, জমি ও কৃষি সম্পদে বিনিয়োগ এবং
+          কৃষিভিত্তিক নতুন enterprise তৈরি করা।
+        </p>
+
+        <div class="row g-3 mt-3">
+          <div class="col-sm-6">
+            <div class="d-flex gap-3">
+              <div class="icon-box flex-shrink-0"><i class="bi bi-bullseye"></i></div>
+              <div><h6 class="fw-bold mb-1">লক্ষ্যভিত্তিক</h6><p class="small text-secondary mb-0">পরিকল্পিত ও পরিমাপযোগ্য ব্যবসায়িক বৃদ্ধি।</p></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex gap-3">
+              <div class="icon-box flex-shrink-0"><i class="bi bi-graph-up-arrow"></i></div>
+              <div><h6 class="fw-bold mb-1">দীর্ঘমেয়াদি</h6><p class="small text-secondary mb-0">ধাপে ধাপে স্থায়ী agro enterprise গড়ে তোলা।</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="section-pad soft-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Mission & Vision</div>
+      <h2 class="section-title">আমাদের উদ্দেশ্য</h2>
+      <p class="section-lead mx-auto">কৃষির সম্ভাবনাকে সংগঠিত ব্যবসায়িক ব্যবস্থায় রূপান্তর করা।</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="value-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-eye"></i></div>
+          <h4 class="fw-bold">Vision</h4>
+          <p class="text-secondary mb-0">বাংলাদেশের একটি নির্ভরযোগ্য, আধুনিক ও বহুমুখী কৃষিভিত্তিক প্রতিষ্ঠান হিসেবে প্রতিষ্ঠিত হওয়া।</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-rocket-takeoff"></i></div>
+          <h4 class="fw-bold">Mission</h4>
+          <p class="text-secondary mb-0">প্রযুক্তি, দক্ষ ব্যবস্থাপনা ও বাজারভিত্তিক পরিকল্পনার মাধ্যমে কৃষি উৎপাদন ও ব্যবসার সক্ষমতা বৃদ্ধি করা।</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="value-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-heart"></i></div>
+          <h4 class="fw-bold">Commitment</h4>
+          <p class="text-secondary mb-0">কৃষক, ক্রেতা, অংশীদার ও বিনিয়োগকারীদের জন্য দায়িত্বশীল এবং দীর্ঘমেয়াদি মূল্য সৃষ্টি করা।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors" class="section-pad">
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-7">
+        <div class="section-kicker">Our Business</div>
+        <h2 class="section-title mb-2">চারটি মূল সেক্টর</h2>
+        <p class="section-lead mb-0">একটি সমন্বিত ব্যবসায়িক কাঠামোর মাধ্যমে কৃষির বিভিন্ন ধাপকে একই ecosystem-এর মধ্যে আনা।</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="sector-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-flower1"></i></div>
+          <h4 class="fw-bold">Agriculture</h4>
+          <p class="text-secondary">ধান, আলু, সরিষা, সবজি ও অন্যান্য কৃষি উৎপাদন।</p>
+          <ul class="small text-secondary ps-3 mb-0">
+            <li>Crop Farming</li><li>Modern Farming</li><li>Farm Management</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sector-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-box-seam"></i></div>
+          <h4 class="fw-bold">Production</h4>
+          <p class="text-secondary">গবাদিপশু, ছাগল, পোল্ট্রি ও দুধ উৎপাদনসহ livestock projects.</p>
+          <ul class="small text-secondary ps-3 mb-0">
+            <li>Cattle</li><li>Goat</li><li>Poultry & Dairy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sector-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-building"></i></div>
+          <h4 class="fw-bold">Enterprise</h4>
+          <p class="text-secondary">কৃষিপণ্য, সরবরাহ, বাজারজাতকরণ ও নতুন agro-business উদ্যোগ।</p>
+          <ul class="small text-secondary ps-3 mb-0">
+            <li>Agro Trading</li><li>Supply Chain</li><li>Online Business</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="sector-card p-4">
+          <div class="icon-box mb-4"><i class="bi bi-pie-chart"></i></div>
+          <h4 class="fw-bold">Investment</h4>
+          <p class="text-secondary">কৃষিজমি, agro projects ও সম্ভাবনাময় সম্পদে পরিকল্পিত বিনিয়োগ।</p>
+          <ul class="small text-secondary ps-3 mb-0">
+            <li>Land Lease</li><li>Agro Projects</li><li>Asset Growth</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY -->
+<section id="history" class="section-pad soft-section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <div class="section-kicker">Our Journey</div>
+        <h2 class="section-title">একটি দীর্ঘমেয়াদি যাত্রার শুরু</h2>
+        <p class="section-lead">
+          সরকার এগ্রো ইন্ডাস্ট্রিজের যাত্রা পরিকল্পনা, ছোট উদ্যোগ এবং ধাপে ধাপে
+          একটি পূর্ণাঙ্গ agro enterprise গড়ে তোলার লক্ষ্য নিয়ে এগিয়ে যাবে।
+        </p>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="year">01 — Foundation</div>
+            <h5 class="fw-bold mt-1">ভিত্তি ও পরিকল্পনা</h5>
+            <p class="text-secondary mb-0">ব্যবসার কাঠামো, মূলধন পরিকল্পনা, ঝুঁকি ব্যবস্থাপনা ও প্রাথমিক প্রকল্প নির্বাচন।</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="year">02 — Launch</div>
+            <h5 class="fw-bold mt-1">প্রথম উৎপাদন ও বাণিজ্য</h5>
+            <p class="text-secondary mb-0">নির্বাচিত কৃষি প্রকল্প ও দ্রুত cash-flow তৈরি করতে সক্ষম বাণিজ্যিক কার্যক্রম শুরু।</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="year">03 — Expansion</div>
+            <h5 class="fw-bold mt-1">সম্পদ ও কার্যক্রম বৃদ্ধি</h5>
+            <p class="text-secondary mb-0">জমি, livestock, supply chain এবং বাজারজাতকরণ সক্ষমতা ধাপে ধাপে সম্প্রসারণ।</p>
+          </div>
+          <div class="timeline-item mb-0">
+            <span class="timeline-dot"></span>
+            <div class="year">04 — Enterprise</div>
+            <h5 class="fw-bold mt-1">একটি পূর্ণাঙ্গ Agro Group</h5>
+            <p class="text-secondary mb-0">Production, Agriculture, Enterprise ও Investment—চার সেক্টরকে সমন্বিত করে দীর্ঘমেয়াদি growth platform তৈরি।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values" class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-kicker">Our Values</div>
+      <h2 class="section-title">যে মূল্যবোধে আমরা বিশ্বাস করি</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="value-card p-4 text-center">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-shield-check"></i></div>
+          <h5 class="fw-bold">Integrity</h5><p class="small text-secondary mb-0">স্বচ্ছতা ও বিশ্বাসযোগ্যতা।</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="value-card p-4 text-center">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-lightbulb"></i></div>
+          <h5 class="fw-bold">Innovation</h5><p class="small text-secondary mb-0">আধুনিক চিন্তা ও প্রযুক্তির ব্যবহার।</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="value-card p-4 text-center">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-tree"></i></div>
+          <h5 class="fw-bold">Sustainability</h5><p class="small text-secondary mb-0">দীর্ঘমেয়াদি ও পরিবেশবান্ধব উন্নয়ন।</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="value-card p-4 text-center">
+          <div class="icon-box mx-auto mb-3"><i class="bi bi-people"></i></div>
+          <h5 class="fw-bold">People First</h5><p class="small text-secondary mb-0">মানুষ, কৃষক ও অংশীদারের মূল্য সৃষ্টি।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="section-pad pt-0">
+  <div class="container">
+    <div class="cta">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <div class="section-kicker text-white-50">Let's Build Together</div>
+          <h2 class="display-5 fw-bold mb-3">কৃষির সম্ভাবনাকে নতুন উচ্চতায় নিয়ে যাই</h2>
+          <p class="mb-0 text-white-50">Sorkar Agro Industries-এর সাথে যুক্ত হয়ে একটি টেকসই agro ecosystem গড়ে তুলুন।</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="mailto:info@sorkaragro.com" class="btn btn-light btn-lg rounded-pill px-4">
+            যোগাযোগ করুন <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Footer start ================= -->
+<div class="container">
+      <footer class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#" aria-label="Instagram"
+                ><svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use></svg
+              ></a>
+            </li>
+            <li class="ms-3">
+              <a class="link-body-emphasis" href="#" aria-label="Facebook"
+                ><svg class="bi" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
